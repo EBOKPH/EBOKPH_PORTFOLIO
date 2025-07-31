@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 
 <head>
   <meta charset="UTF-8" />
@@ -16,7 +16,13 @@
         />
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/fontawesome.css" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer" />
+
 
   <!-- Google Fonts -->
 
@@ -58,11 +64,15 @@
     </div>
   </nav>
 
+ <button onclick="toggleDarkMode()" class="dark-toggle-btn">🌙</button>
+
   <!-- INTRO SECTION -->
   <section class="intro-section">
     <div class="intro-container">
       <div class="intro-left">
         <h1>Hi! I am Kobe D. Estabalaya</h1>
+        <div class="container text-center mt-5">
+    </div>
         <p>
           As a Computer Science graduate and software developer, I specialize in creating reliable and scalable software solutions, with a strong focus on clean code, problem-solving, and continuous learning.
         </p>
@@ -139,12 +149,12 @@
         <div class="portfolio-box">
           <div class="buttondesign">
             <a href="https://github.com/EBOKPH/SIGNGUARD_APP" target="_blank">
-              <img src="images/portfolio/portfolio-1.png" alt="Project 1" />
+              <img src="images/portfolio/portfolio-1.png" style="max-width: 332px; max-height: 215px; display: block; margin: auto" alt="Project 1"  />
               <h4>SIGNGUARD</h4>
             </a>
             <div class="portfolio-info">
               <p>
-                SIGNGUARD is a gesture-based biometric app lock that adds an extra layer of security to mobile applications. Using computer vision, it recognizes hand gestures for authentication, enhancing protection without replacing existing login methods.
+                SIGNGUARD is a gesture-based biometric app lock that adds an extra layer of security to mobile applications. Using computer vision, it recognizes hand gestures for authentication, enhancing protection, privacy, and usability without replacing existing login methods.
               </p>
             </div>
           </div>
@@ -159,7 +169,7 @@
             </a>
             <div class="portfolio-info">
               <p>
-                Assidere is an educational mobile quiz app designed to help future English educators practice and master grammar, vocabulary, and teaching concepts through interactive quizzes.
+                Assidere is a mobile quiz app that helps future English educators master grammar, vocabulary, and teaching strategies through interactive quizzes, immediate feedback, and performance tracking in a fun, engaging learning environment.
               </p>
             </div>
           </div>
@@ -174,7 +184,7 @@
             </a>
             <div class="portfolio-info">
               <p>
-                CatchIntegers is a math-based mobile game that turns learning into play. Inspired by the classic Snake game, players control a snake that "catches" the correct integers based on math prompts or problems. It’s designed to help students practice basic arithmetic and number recognition in an engaging, interactive way—making education both fun and effective.
+                CatchIntegers is a math-based mobile game where players guide a snake to catch correct answers to math problems. Inspired by Snake, it helps students practice arithmetic and number recognition in a fun, interactive, and educational way.
               </p>
             </div>
           </div>
@@ -218,7 +228,8 @@
         </a>
       </div>
     </div>
-  </footer>
+  </footer>  
+<script src="assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
