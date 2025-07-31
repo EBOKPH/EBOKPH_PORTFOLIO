@@ -54,6 +54,19 @@ p {
   color: #8838e5;
 }
 
+/* magic compiler stuff hamburger */
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
 
 .logo img {
   height: 40px;
@@ -122,13 +135,7 @@ p {
   color: white;
 }
 
-/* Wave Divider */
-.wave-svg {
-  display: block;
-  margin-top: -1px;
-}
-
-/* About, FAQ, etc. */
+/* Section 1 and 3 */
 .section {
   padding: 4rem 2rem;
   background-color: #f1dcff;
@@ -164,8 +171,8 @@ p {
 .accordion {
   max-width: 900px;
   margin: 0 auto;
-   padding-left: 1rem;  /* Add space on the left side */
-  padding-right: 1rem; /* Optional: add right spacing too for symmetry */
+   padding-left: 1rem;  
+  padding-right: 1rem; 
 }
 
 .accordion-item {
@@ -192,7 +199,7 @@ p {
   
 }
 
-
+/* not yet developt for future hidden panel*/
 .accordion-item.active .accordion-body {
   display: block;
 }
@@ -264,6 +271,7 @@ p {
   font-size: 2rem;
   color: #8838e5;
   margin-bottom: 1rem;
+  
 }
 
 .contact-card h4 {
@@ -302,35 +310,14 @@ p {
   gap: 20px;
 }
 
-.social-icons a {
-  color: white;
-  transition: transform 0.3s ease;
-}
 
-.social-icons a:hover {
-  transform: scale(1.1);
-}
-
-/* Style for image-based icons */
+/* Email git phone style */
 .social-icon-img {
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
   object-fit: contain;
 }
 
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .intro-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-  }
-}
 
 .buttondesign {
   display: block;
