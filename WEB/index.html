@@ -29,62 +29,69 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 <body>
+<!-- NAVBAR -->
+<section id="home"></section>
+<nav class="navbar custom-navbar navbar-expand-lg">
+  <div class="container nav-container">
+    <!-- Brand Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/logo.png" alt="Kobe Logo" style="height: 40px; margin-right: 10px;">
+      <strong>KOBE D. ESTABALAYA</strong>
+    </a>
 
-  <!-- NAVBAR -->
-  <section id="home"></section>
-  <nav class="navbar custom-navbar navbar-expand-lg">
-    <div class="container nav-container">
-      <a class="navbar-brand" href="index.html">
-        <strong>KOBE D. ESTABALAYA</strong>
-        <img src="images/logo.png" alt="Kobe Logo" style="height: 40px;">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto nav-links">
-          <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#abtme">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+    <!-- Hamburger Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav Items -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto nav-links">
+        <li class="nav-item">
+          <a class="nav-link" href="#home"><u>Home</u></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#abtme"><u>About Me</u></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio"><u>Portfolio</u></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact"><u>Contact</u></a>
+        </li>
+        <li class="nav-item">
+          <!-- Dark Mode Toggle Button -->
+          <button onclick="toggleDarkMode()" class="btn btn-outline-dark ms-lg-3 mt-2 mt-lg-0">
+            🌙
+          </button>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
- <button onclick="toggleDarkMode()" class="dark-toggle-btn">🌙</button>
 
   <!-- INTRO SECTION -->
   <section class="intro-section">
     <div class="intro-container">
       <div class="intro-left">
-        <h1>Hi! I am Kobe D. Estabalaya</h1>
+        <h1 class="pulsating-text">Hello there!</h1><br>
+        <h1> I am <br><strong>Kobe D. Estabalaya</strong></h1>
         <div class="container text-center mt-5">
-    </div>
-        <p>
+        <h5>
           As a Computer Science graduate and software developer, I specialize in creating reliable and scalable software solutions, with a strong focus on clean code, problem-solving, and continuous learning.
-        </p>
-        <a href="https://github.com/EBOKPH" target="_blank" class="custom-btn">
-          Check out my Github here   
-        </a>
-        <a href="assets/ESTABALAYA_RESUME_PIC.jpg" target="_blank" class="custom-btn">
-          Over here is my Resume
-        </a>
+        </h5>
+    </div>
+        
+        <div class="button-group">
+          <a href="https://github.com/EBOKPH" target="_blank" class="custom-btn">Check out my Github here</a>
+          <a href="resume.pdf" target="_blank" class="custom-btn">Over here is my Resume</a>
+        </div>
       </div>
       <div class="intro-right">
-        <img src="images/arts/kobe.jpg" alt="Kobe De Silva Estabalaya" class="responsive-img" />
+        <img src="images/arts/kobe.jpg" alt="Kobe De Silva Estabalaya" />
       </div>
     </div>
   </section>
