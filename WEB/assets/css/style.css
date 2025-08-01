@@ -405,6 +405,18 @@ p {
   color: #4a179a;
 }
 
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; 
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.button-group .custom-btn {
+  text-align: center;
+}
+
 .button-group a {
   margin-right: 1rem;
 }
