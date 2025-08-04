@@ -92,15 +92,16 @@ p {
 .intro-left {
   flex: 1 1 600px;
   text-align: center;
-
 }
 
 .intro-left h1 {
   font-size: 3rem;
+  margin-bottom: 0.5rem; 
+  line-height: 1.2; 
 }
 
 .intro-left h1 strong {
-  color: #8838e5; /* purple */
+  color: #8838e5; 
   font-weight: bold;
 }
 
@@ -124,9 +125,48 @@ p {
   height: auto;
 }
 
+.clickable-img {
+  max-width: 200px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
 .bordered-img {
-  border: 4px solid #8838e5; 
+  border: 4px solid #000000; 
   border-radius: 10px;     
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(80, 80, 80, 0.45);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox-content {
+  max-width: 100%;
+  max-height: 10  0vh;
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.45);
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+  transition: 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff5050;
 }
 
 /* pulsating Magic  */
@@ -152,6 +192,172 @@ p {
   }
 }
 
+.about-container {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.about-header {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.about-header .subtitle {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.about-header p {
+  line-height: 1.6;
+}
+
+.about-section {
+  color: white;
+  padding: 60px 20px;
+  clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+  margin: 0;
+}
+
+.yellow-section {
+  background-color: #facc15; /* yellow-400 */
+}
+
+.green-section {
+  background-color: #22c55e; /* green-500 */
+}
+
+.inner-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.inner-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.inner-content ul {
+  margin: 10px 0 20px 20px;
+  list-style: disc;
+}
+
+
+  #abtme {
+    padding: 50px 0;
+    background: #f8f8f8;
+  }
+
+  #abtme h2 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  #abtme .subtitle {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 40px;
+  }
+
+  .slanted-section {
+    color: white;
+    padding: 40px 30px;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
+  }
+
+  .slanted-yellow {
+    background: #c7ee3b;
+    color: #111;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+  }
+
+  .slanted-green {
+    background: #32df60;
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  }
+
+  .slanted-section h3 {
+    margin-top: 0;
+    font-size: 1.8rem;
+  }
+
+  .slanted-section ul {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+
+  .slanted-section strong {
+    font-weight: bold;
+  }
+
+  .section-container {
+    margin: 0;
+    padding: 0;
+  }
+
+.gallery-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  background-color: #f9f9f9;
+}
+
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0;
+  display: none;
+  border-radius: 12px;
+}
+
+.carousel-images img.active {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
 /* Section 1 and 3 */
 .section {
   padding: 4rem 2rem;
@@ -163,6 +369,7 @@ p {
   text-align: center;
   font-size: 2.5rem;
   color: #333;
+  
 }
 
 .subtitle {
@@ -185,6 +392,60 @@ p {
 }
 
 /* Accordion changed my mind but kept the name */
+
+.custom-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.accordion-block {
+  color: #222;
+  padding: 2rem;
+  transform: skewX(-12deg);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.accordion-block h3 {
+  transform: skewX(12deg);
+  margin-bottom: 1rem;
+}
+
+.accordion-block p,
+.accordion-block ul {
+  transform: skewX(12deg);
+  margin: 0;
+}
+
+.accordion-block.yellow {
+  background: linear-gradient(to right, #f7f04d, #e2de22);
+}
+
+.accordion-block.green {
+  background: linear-gradient(to right, #31cc57, #23b345);
+  color: white;
+}
+
+.right-slant {
+  transform: skewX(-12deg);
+}
+
+.left-slant {
+  transform: skewX(12deg);
+}
+
+.right-slant h3,
+.right-slant p,
+.right-slant ul,
+.left-slant h3,
+.left-slant p,
+.left-slant ul {
+  transform: skewX(-12deg);
+}
+
 .accordion {
   max-width: 900px;
   margin: 0 auto;
