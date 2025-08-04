@@ -54,7 +54,7 @@ p {
   color: #8838e5;
 }
 
-/* magic compiler stuff hamburger */
+/* hamburger */
 @media (max-width: 720px) {
   .intro-container {
     flex-direction: column;
@@ -217,7 +217,7 @@ p {
 /* not yet developt for future hidden panel
 .accordion-item.active .accordion-body {
   display: block;
-}*/
+} */
 
 /* Portfolio Grid */
 .portfolio-grid {
