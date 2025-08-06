@@ -2,15 +2,6 @@ function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
 }
 
-  function openLightbox(src) {
-    document.getElementById("lightbox-img").src = src;
-    document.getElementById("lightbox").style.display = "flex";
-  }
-
-  function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-  }
-
   const images = document.querySelectorAll('.carousel-images img');
   let currentIndex = 0;
 
