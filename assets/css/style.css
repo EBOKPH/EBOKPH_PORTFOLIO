@@ -18,6 +18,76 @@ p {
   color: white;
 }
 
+.half-underline {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.half-underlinedefault {
+  cursor: default;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.whole-underlinedefault {
+  cursor: default;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+.half-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.4s ease, right 0.4s ease;
+}
+
+.half-underlinedefault::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.4s ease, right 0.4s ease;
+}
+
+.whole-underlinedefault::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.4s ease, right 0.4s ease;
+}
+
+.half-underline:hover::after {
+  width: 50%;       
+  right: 0;          
+}
+
+.half-underlinedefault:hover::after {
+  width: 50%;       
+  right: 0;          
+}
+
+.whole-underlinedefault:hover::after {
+  width: 100%;       
+  right: 0;          
+}
+
 .custom-navbar {
   background-color: #004b23; 
   border-bottom: 2px solid #000000;
@@ -145,6 +215,7 @@ p {
 .intro-right img {
   max-width: 100%;
   height: auto;
+  border-radius: 100px;
 }
 
 .clickable-img {
@@ -180,51 +251,53 @@ p {
 
 .zigzag-border {
   height: 60px;
-  background-color: #ffe568;
-  clip-path: polygon(
-    0 100%, 10% 0, 20% 100%, 30% 0, 40% 100%, 
-    50% 0, 60% 100%, 70% 0, 80% 100%, 90% 0, 100% 100%
-  );
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%23ffe568'/></svg>");
+  background-repeat: repeat-x;
+  background-size: 400px 60px;
+  animation: moveWave 6s linear infinite;
+}
+
+.zigzag-border1 {
+  height: 60px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%23FFE568'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%23379A0E'/></svg>");
+  background-repeat: repeat-x;
+  background-size: 400px 60px;
+  animation: moveWave 6s linear infinite;
+}
+
+.zigzag-border2 {
+  height: 60px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%23379A0E'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%235EB618'/></svg>");
+  background-repeat: repeat-x;
+  background-size: 400px 60px;
+  animation: moveWave 6s linear infinite;
+}
+
+.zigzag-border3 {
+  height: 60px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%236cc01b'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%235EB618'/></svg>");
+  background-repeat: repeat-x;
+  background-size: 400px 60px;
+  animation: moveWave 6s linear infinite;
+}
+
+@keyframes moveWave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -400px 0;
+  }
 }
 
 
-.zigzag-border-reverse {
-  height: 60px;
-  background-color: #ffe568;
-  clip-path: polygon(
-    0 100%, 10% 0, 20% 100%, 30% 0, 40% 100%, 
-    50% 0, 60% 100%, 70% 0, 80% 100%, 90% 0, 100% 100%
-  );
-  transform: rotate(180deg);
-}
-
-.zigzag-border-reverse2 {
-  height: 60px;
-  background-color: #379a0e;
-  clip-path: polygon(
-    0 100%, 10% 0, 20% 100%, 30% 0, 40% 100%, 
-    50% 0, 60% 100%, 70% 0, 80% 100%, 90% 0, 100% 100%
-  );
-  transform: rotate(180deg);
-}
-
-.zigzag-border-reverse3 {
-  height: 60px;
-  background-color: #379a0e;
-  clip-path: polygon(
-    0 100%, 10% 0, 20% 100%, 30% 0, 40% 100%, 
-    50% 0, 60% 100%, 70% 0, 80% 100%, 90% 0, 100% 100%
-  );
-}
-
-.zigzag-border-reverse4 {
-  height: 60px;
-  background-color: #379a0e;
-  clip-path: polygon(
-    0 100%, 10% 0, 20% 100%, 30% 0, 40% 100%, 
-    50% 0, 60% 100%, 70% 0, 80% 100%, 90% 0, 100% 100%
-  );
-  transform: rotate(180deg);
+@keyframes moveWave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -400px 0;
+  }
 }
 
 .about-container {
@@ -416,7 +489,7 @@ p {
 .section h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #333;
+  color: #000000;
   
 }
 
@@ -464,7 +537,7 @@ p {
 }
 
 .accordion-block {
-  color: #222;
+  color: #000000;
   padding: 2rem;
   transform: skewX(-12deg);
   border-radius: 12px;
@@ -795,4 +868,5 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  cursor: default;
 }

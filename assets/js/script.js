@@ -2,6 +2,8 @@ function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
 }
 
+  // revolving galery
+
   const images = document.querySelectorAll('.carousel-images img');
   let currentIndex = 0;
 
