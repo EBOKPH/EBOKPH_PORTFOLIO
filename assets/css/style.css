@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-/* Font stuff */
 h1, h2, h3, h4, h5 {
   font-weight: 700;
   margin-bottom: 3.5rem;
@@ -17,6 +16,8 @@ p {
 .myname {
   color: white;
 }
+
+/* underline design Start */
 
 .half-underline {
   cursor: pointer;
@@ -88,6 +89,10 @@ p {
   right: 0;          
 }
 
+/* underline design end */
+
+/* Navigation bar Design Start */
+
 .custom-navbar {
   background-color: #004b23; 
   border-bottom: 2px solid #000000;
@@ -152,18 +157,15 @@ p {
   }
 }
 
-.colorholder {
-  background-color: #fbff00; /* Placeholder color */
-  padding: 1rem;
-  border-radius: 8px;
-}
+/* Navigation bar Design End */
+
 
 .intro-section {
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: cover;
-  padding: 100px 20px; /* adjust height/space as needed */
+  padding: 100px 20px; 
   color: rgb(0, 0, 0);
   padding-top: 30px;
 } 
@@ -275,7 +277,15 @@ p {
 
 .zigzag-border3 {
   height: 60px;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%236cc01b'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%235EB618'/></svg>");
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%2364ba19'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%23379a0e'/></svg>");
+  background-repeat: repeat-x;
+  background-size: 400px 60px;
+  animation: moveWave 6s linear infinite;
+}
+
+.zigzag-border4 {
+  height: 60px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%23379a0e'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%237ccb21'/></svg>");
   background-repeat: repeat-x;
   background-size: 400px 60px;
   animation: moveWave 6s linear infinite;
@@ -356,62 +366,45 @@ p {
 }
 
 
-  #abtme {
-    padding: 50px 0;
-  }
+.slanted-section {
+  color: white;
+  padding: 40px 30px;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
+}
 
-  #abtme h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: 40px;
-    margin-bottom: 5px;
-  }
+.slanted-yellow {
+  background: #c7ee3b;
+  color: #111;
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+}
 
-  #abtme .subtitle {
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 40px;
-  }
+.slanted-green {
+  background: #32df60;
+  color: #000000;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
 
-  .slanted-section {
-    color: white;
-    padding: 40px 30px;
-    margin-bottom: 0;
-    position: relative;
-    z-index: 1;
-    clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
-  }
+.slanted-section h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
 
-  .slanted-yellow {
-    background: #c7ee3b;
-    color: #111;
-    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
-  }
+.slanted-section ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
 
-  .slanted-green {
-    background: #32df60;
-    color: #000000;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-  }
+.slanted-section strong {
+  font-weight: bold;
+}
 
-  .slanted-section h3 {
-    margin-top: 0;
-    font-size: 1.8rem;
-  }
-
-  .slanted-section ul {
-    margin-top: 10px;
-    padding-left: 20px;
-  }
-
-  .slanted-section strong {
-    font-weight: bold;
-  }
-
-  .section-container {
-    margin: 0;
-    padding: 0;
-  }
+.section-container {
+  margin: 0;
+  padding: 0;
+}
 
 .gallery-section {
   display: flex;
@@ -467,6 +460,15 @@ p {
   right: 10px;
 }
 
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+/*Sections Start*/
+
 .section0 {
   padding: 2rem 2rem;
   background: linear-gradient(to bottom, #005500, #008000);
@@ -477,26 +479,16 @@ p {
   color: #fff;
 }
 
-
-/* Section 1 and 3 */
 .section {
   padding: 4rem 2rem;
   background: #ffe568; 
 }
 
-
-
 .section h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #000000;
-  
-}
-
-.subtitle {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-top: 40px;
+  margin-bottom: 5px;
   color: #000000;
 }
 
@@ -510,8 +502,8 @@ p {
 .section2 h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #333;
-  margin-top: 40px;
+  color: #000000;
+  margin-top: 20px;
   margin-bottom: 5px;
 }
 
@@ -527,7 +519,10 @@ p {
   
 }
 
-/* Accordion changed my mind but kept the name */
+/*Sections End*/
+
+
+/* Accordion = About Me; Start */
 
 .custom-accordion {
   display: flex;
@@ -565,6 +560,8 @@ p {
   color: #000000;
 }
 
+/* yellow and Green slanted holders */
+
 .right-slant {
   transform: skewX(-12deg);
 }
@@ -585,39 +582,7 @@ p {
   transform: skewX(-12deg);
 }
 
-.accordion {
-  max-width: 900px;
-  margin: 0 auto;
-   padding-left: 1rem;  
-  padding-right: 1rem; 
-}
-
-.accordion-item {
-  border: 1px solid #000000;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-  overflow: hidden;
-}
-
-.accordion-header {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  padding: 1rem;
-  font-weight: bold;  
-  width: 100%;
-  text-align: left;
-  border: none;
-}
-
-.accordion-body {
-  padding: 2rem;
-  border-top: px solid #000000;
-}
-
-/* not yet developt for future hidden panel
-.accordion-item.active .accordion-body {
-  display: block;
-} */
+/* Accordion = About Me; End */
 
 /* Portfolio Grid */
 .portfolio-grid {
@@ -667,7 +632,7 @@ p {
 .contact-heading {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #5b008a;
+  color: #000000;
 }
 
 .contact-grid {
@@ -679,41 +644,51 @@ p {
 
 /* Individual Contact Card */
 .contact-card {
-  background-color: #fff;
-  border: 2px solid #dcb6ff;
+  background-color: #ffd000;
+  border: 2px solid #000000;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 0;
   width: 100%;
   max-width: 250px;
-  box-shadow: 0 4px 12px rgba(136, 56, 229, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* Make the anchor fill the entire card */
+.contact-card a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
   word-break: break-word;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .contact-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(136, 56, 229, 0.2);
+  box-shadow: -10px 6px 20px #ffe262;
+}
+
+.contact-card a:hover {
+  color: #004b23;
 }
 
 .contact-card h4 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #4a0072;
+  color: #004b23;
 }
 
-.contact-card p,
-.contact-card a {
-  font-size: 0.95rem;
-  color: #333;
-  text-decoration: none;
-  word-break: break-word;
-}
-
-.contact-card a:hover {
-  color: #8838e5;
+.contact-card a:hover h4,
+.contact-card a:hover p {
+  color: #004b23;
   text-decoration: underline;
 }
+
 
 
 /* Footer */

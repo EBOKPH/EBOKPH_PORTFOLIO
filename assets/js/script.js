@@ -1,32 +1,39 @@
 function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-}
+    document.body.classList.toggle('dark-mode');
 
-  // revolving galery
+    const image = document.getElementById("introImage");
+    const isDark = document.body.classList.contains("dark-mode");
 
-  const images = document.querySelectorAll('.carousel-images img');
-  let currentIndex = 0;
-
-  function showImage(index) {
-    images.forEach((img, i) => {
-      img.classList.toggle('active', i === index);
-    });
+    image.src = isDark
+      ? "images/arts/finaldarkmodeface.png"
+      : "images/arts/kobe.png";
   }
 
-  document.querySelector('.prev').addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImage(currentIndex);
-  });
+// revolving galery
 
-  document.querySelector('.next').addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-  });
+const images = document.querySelectorAll('.carousel-images img');
+let currentIndex = 0;
 
-  // Auto-rotate every 3 seconds (optional)
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-  }, 3000);
+function showImage(index) {
+  images.forEach((img, i) => {
+    img.classList.toggle('active', i === index);
+  });
+}
+
+document.querySelector('.prev').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  showImage(currentIndex);
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage(currentIndex);
+});
+
+// Auto-rotate every 3 seconds (optional)
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage(currentIndex);
+}, 3000);
 
 
