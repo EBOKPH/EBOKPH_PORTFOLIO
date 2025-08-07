@@ -30,6 +30,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    
   </head>
 
   <body>
@@ -278,22 +279,100 @@
 
     <div class="zigzag-border2"></div>
 
-    <section class="gallery-section3">
-      <div class="carousel">
-        <button class="prev">&#10094;</button>
-        <div class="carousel-images">
-          <img
-            src="images/gallery/elonmusk.jpg"
-            alt="Gallery Image 1"
-            class="active"
-          />
-          <img src="images/gallery/billgates.jpg" alt="Gallery Image 2" />
-          <img src="images/gallery/stevejobs.jpg" alt="Gallery Image 3" />
-          <img src="images/gallery/billgates.jpg" alt="Gallery Image 4" />
+        <!--------  Revolving Image ----------->
+
+    <section class="gallery-section bookbody">
+      <div class="flipbook">
+        <div class="hard">My Life lately<small>~ Kobe De Silva Estabalaya</small></div>
+        <div class="hard"></div>
+        <div>
+          <small><b>At the End of the Day Gabi na.</b></small>
+          <small>Don't hate the player hate the game!</small>
         </div>
-        <button class="next">&#10095;</button>
+        <div>
+        <img src="images/booklet/Book1.JPG" alt="" />
+          <small>Looking down towards all these haters!</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book2.JPG" alt="" />
+          <small>Fire Exit Photoshoot</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book3.JPG" alt="" />
+          <small>Drip check!</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book4.JPG" alt="" />
+          <small>Vacant hours sa Tagaytay</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book5.JPG" alt="" />
+          <small>IGNITE 2024 HOST</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book6.JPG" alt="" />
+          <small>The Wave Bar</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book7.JPG" alt="" />
+          <small>OMSYNC</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book8.JPG" alt="" />
+          <small>THESIS DEFENDED</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book9.JPG" alt="" />
+          <small>CR with the boys</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book10.JPG" alt="" />
+          <small>ABSCBN Moments</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book11.PNG" alt="" />
+          <small>Violin in QC</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book12.JPG" alt="" />
+          <small>STARFLEET!</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book13.JPG" alt="" />
+          <small>I.S.A.W 2024</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book14.JPG" alt="" />
+          <small>TEATRO ROSARIO FIRST MEET</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book15.PNG" alt="" />
+          <small>TAGAYTAY TRIPPINGS</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book16.JPG" alt="" />
+          <small>Musical Directorial Debut</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book17.JPEG" alt="" />
+          <small>LAKAN 2025 Magindara</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book18.JPEG" alt="" />
+          <small>LAKAN 2025 Masasamang inspect elements</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book19.JPG" alt="" />
+          <small>Teatro Rosario kape</small>
+        </div>
+        <div>
+          <img src="images/booklet/Book20.JPG" alt="" />
+          <small>Teatro Rosario Reunion</small>
+        </div>
+        <div class="hard"><strong>Thank You </strong><small>~ Kobe De Silva Estabalaya</small></div>
       </div>
     </section>
+
 
     <div class="zigzag-border3"></div>
 
@@ -397,7 +476,12 @@
         </div>
       </div>
     </footer>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/turn.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(".flipbook").turn();
+    </script>
   </body>
 </html>

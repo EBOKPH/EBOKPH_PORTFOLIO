@@ -277,7 +277,7 @@ p {
 
 .zigzag-border3 {
   height: 60px;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%2364ba19'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%23379a0e'/></svg>");
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%235eb618'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%23379a0e'/></svg>");
   background-repeat: repeat-x;
   background-size: 400px 60px;
   animation: moveWave 6s linear infinite;
@@ -411,7 +411,7 @@ p {
   justify-content: center;
   align-items: center;
   padding: 3rem 0;
-  background-color: #f9f9f9;
+  background-color: #5eb618;
 }
 
 .carousel {
@@ -763,7 +763,7 @@ p {
 
 .buttondesign:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 20px #00000000;
 }
 
 .buttondesign:hover img {
@@ -795,45 +795,139 @@ p {
   margin-right: 0;
 }
 
+
+/* Flipbook Styles */
+
+.bookbody2 {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  width: 100vw;
+	overflow: hidden;
+	background: #f1c40f;
+}
+
+.flipbook {
+    width: 1000px;
+    height: 600px;
+}
+
+.flipbook .hard {
+    background: #090e32 !important;
+    color: #fff;
+    font-weight: bold;
+    border: none; 
+}
+
+.flipbook .hard small{
+	font-style: italic;
+	font-weight: lighter;
+	opacity: 0.7;
+	font-size: 14px;
+}
+
+.flipbook .page {
+  background: #dddddd;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  gap: 10px;
+  border: 3px solid #0000001c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.page img {
+  max-width: 90%;
+  max-height: 75%;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+  border: 2px solid black;
+  border-radius: 4px; 
+}
+
+
+.flipbook .page small{
+	font-size: 14px;
+    margin-bottom: 10px;
+}
+
 /* Dark Modes */
 .dark-mode {
   background-color: #111;
-  color: white;
+  color: #eaeaea;
 }
 
 .dark-mode p,
 .dark-mode .section h2,
-.dark-mode .section2 h2{
-  color: white;
+.dark-mode .section2 h2,
+.dark-mode .subtitle {
+  color: #f0f0f0;
 }
 
 .dark-mode .intro-section,
 .dark-mode .section,
-.dark-mode .section2 {
-  background: linear-gradient(to right, #333, #222);
-   color: #fff
+.dark-mode .section2,
+.dark-mode .section3 {
+  background: linear-gradient(to right, #222, #111);
+  color: #eaeaea;
+}
+
+.dark-mode .custom-btn {
+  background-color: #eeeeee;
+  color: #000000;
+  border: 2px solid #eeeeee;
 }
 
 .dark-mode .portfolio-info {
-  background-color: rgb(0, 0, 0);
+  background-color: #1a1a1a;
+  color: #fff;
 }
 
-
-.dark-mode .custom-btn {
-  background-color: white;
-  color: #000;
-  border: 2px solid #fff;
+.dark-mode .portfolio-box {
+  background-color: #000000;
+  border: 2px solid #000000;
 }
 
 .dark-mode .contact-heading,
 .dark-mode .contact-section {
-  background: linear-gradient(to right, #333, #222);
-  color: #ffffff; /* heading collor */
+  background: linear-gradient(to right, #111, #000);
+  color: #f5f5f5;
 }
 
-.bordered-img {
-  border: 4px solid #8838e5; 
-  border-radius: 10px;     
+.dark-mode .accordion-block.yellow {
+  background: #000000;
+  color: #fff;
+}
+
+.dark-mode .accordion-block.green {
+  background: linear-gradient(to right, #1e1e1e, #111);
+  color: #fff;
+}
+
+.dark-mode .buttondesign h4 {
+  background-color: #000000;
+  color: #fff;
+}
+
+.dark-mode .buttondesign:hover h4 {
+  background-color: #000000;
+  color: #ffd000;
+}
+
+.dark-mode .bordered-img {
+  border: 4px solid #ffd700;
+}
+
+.dark-mode .flipbook .page {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.dark-mode .flipbook .hard {
+  background: #8e2d22 !important;
+  color: #ffffff;
 }
 
 
