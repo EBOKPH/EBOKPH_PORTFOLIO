@@ -96,7 +96,7 @@ p {
 .custom-navbar {
   background-color: #004b23; 
   border-bottom: 2px solid #000000;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,19 +110,19 @@ p {
   display: flex !important;
   flex-direction: row;
   align-items: center;
-  gap: 1rem; /* spacing between items */
+  gap: 1rem;
 }
 
 .nav-container {
   width: 100%;
   max-width: 1200px;
   max-height: 300px;
-  height: 100%; /* ensures child elements follow the container height */
+  height: 100%;
   display: flex;
-  align-items: center; /* vertical centering */
+  align-items: center; 
   justify-content: space-between;
   margin: 0 auto;
-  overflow: hidden; /* prevent overflow */
+  overflow: hidden; 
 }
 
 .nav-link {
@@ -414,50 +414,12 @@ p {
   background-color: #5eb618;
 }
 
-.carousel {
-  position: relative;
-  width: 80%;
-  max-width: 600px;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.carousel-images {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-images img {
-  width: 100%;
-  flex-shrink: 0;
-  display: none;
-  border-radius: 12px;
-}
-
-.carousel-images img.active {
-  display: block;
-}
-
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  z-index: 1;
-  border-radius: 50%;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
+.gallery-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #000000;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 .subtitle {
@@ -515,10 +477,19 @@ p {
 .section3 h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #333;
-  
+  color: #000000;
 }
 
+.section4 {
+  padding: 4rem 2rem;
+}
+
+.section4 h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 30px;
+}
 /*Sections End*/
 
 
@@ -775,6 +746,49 @@ p {
   color: #ffd000;
 }
 
+.buttondesignPokemon {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.buttondesignPokemon img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+  padding: 30px;
+}
+
+.buttondesignPokemon h4 {
+  margin: 0;
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #f3e6ff;
+  color: #6b2bbd;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buttondesignPokemon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px #00000000;
+}
+
+.buttondesignPokemon:hover img {
+  transform: scale(1.03);
+}
+
+.buttondesignPokemon:hover h4 {
+  background-color: #e0cff1;
+  color: #ffd000;
+}
+
 .button-group {
   display: flex;
   flex-wrap: wrap;
@@ -810,6 +824,11 @@ p {
 .flipbook {
     width: 1000px;
     height: 600px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Shadow under the book */
+    border: 20px solid #0000001c;
+    background-color: #a35c00;
+    border-radius: 20px;
+    transform: perspective(1000px); /* subtle 3D feel */
 }
 
 .flipbook .hard {
@@ -855,81 +874,72 @@ p {
 
 /* Dark Modes */
 .dark-mode {
-  background-color: #111;
-  color: #eaeaea;
+  background-color: #000 !important;
+  color: #fff !important;
 }
 
-.dark-mode p,
-.dark-mode .section h2,
-.dark-mode .section2 h2,
-.dark-mode .subtitle {
-  color: #f0f0f0;
+.dark-mode * {
+  background-color: transparent !important;
+  color: #fff !important;
+  border-color: #fff !important;
 }
 
+
+
+.dark-mode .custom-btn,
+.dark-mode .contact-card,
+.dark-mode .accordion-block,
+.dark-mode .flipbook,
+.dark-mode .flipbook .page,
+.dark-mode .flipbook .hard,
+.dark-mode .portfolio-box,
+.dark-mode .portfolio-info,
 .dark-mode .intro-section,
 .dark-mode .section,
 .dark-mode .section2,
-.dark-mode .section3 {
-  background: linear-gradient(to right, #222, #111);
-  color: #eaeaea;
+.dark-mode .section3,
+.dark-mode .gallery-section,
+.dark-mode .nav-container,
+.dark-mode .custom-navbar,
+.dark-mode .contact-section,
+.dark-mode .contact-card a,
+.dark-mode .buttondesign h4,
+.dark-mode .zigzag-border,
+.dark-mode .zigzag-border1,
+.dark-mode .zigzag-border2,
+.dark-mode .zigzag-border3,
+.dark-mode .zigzag-border4,
+.dark-mode .section0 {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+  box-shadow: none !important;
 }
 
-.dark-mode .custom-btn {
-  background-color: #eeeeee;
-  color: #000000;
-  border: 2px solid #eeeeee;
+.dark-mode .zigzag-border,
+.dark-mode .zigzag-border1,
+.dark-mode .zigzag-border2,
+.dark-mode .zigzag-border3,
+.dark-mode .zigzag-border4 {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'%3E%3Cpath d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%23000000'/%3E%3C/svg%3E") !important;
+  background-repeat: repeat-x !important;
+  background-size: 400px 60px !important;
+  animation: none !important; /* optional to disable wave movement */
 }
 
-.dark-mode .portfolio-info {
-  background-color: #1a1a1a;
-  color: #fff;
+.dark-mode img {
+  filter: grayscale(100%) brightness(0.8) contrast(1.2) !important;
+  border-color: #fff !important;
 }
 
-.dark-mode .portfolio-box {
-  background-color: #000000;
-  border: 2px solid #000000;
+.dark-mode .nav-links li a:hover,
+.dark-mode .custom-btn:hover,
+.dark-mode .contact-card a:hover,
+.dark-mode .buttondesign:hover h4,
+.dark-mode .buttondesignPokemon:hover h4 {
+  color: #ccc !important;
+  background-color: #111 !important;
 }
-
-.dark-mode .contact-heading,
-.dark-mode .contact-section {
-  background: linear-gradient(to right, #111, #000);
-  color: #f5f5f5;
-}
-
-.dark-mode .accordion-block.yellow {
-  background: #000000;
-  color: #fff;
-}
-
-.dark-mode .accordion-block.green {
-  background: linear-gradient(to right, #1e1e1e, #111);
-  color: #fff;
-}
-
-.dark-mode .buttondesign h4 {
-  background-color: #000000;
-  color: #fff;
-}
-
-.dark-mode .buttondesign:hover h4 {
-  background-color: #000000;
-  color: #ffd000;
-}
-
-.dark-mode .bordered-img {
-  border: 4px solid #ffd700;
-}
-
-.dark-mode .flipbook .page {
-  background: #1e1e1e;
-  color: #fff;
-}
-
-.dark-mode .flipbook .hard {
-  background: #8e2d22 !important;
-  color: #ffffff;
-}
-
 
 body {
   background: linear-gradient(to bottom, #007200, #88D422); /* classic purple */
