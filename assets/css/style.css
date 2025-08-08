@@ -4,12 +4,6 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 body {
   background: linear-gradient(to bottom, #007200, #88d422);
   color: #000000;
@@ -160,20 +154,6 @@ p {
 
 .nav-links li a:hover {
   color: #fcdc2a;
-}
-
-.navbar-toggler {
-  margin-left: auto;
-  align-self: center;
-}
-
-.navbar-collapse {
-  background-color: #004b23;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  z-index: 1050;
 }
 
 /* mobile */
