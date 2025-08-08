@@ -4,12 +4,19 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background: linear-gradient(to bottom, #007200, #88d422);
   color: #000000;
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   cursor: default;
 }
 
@@ -112,10 +119,10 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px #0000000d;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .navbar-nav {
@@ -153,6 +160,20 @@ p {
 
 .nav-links li a:hover {
   color: #fcdc2a;
+}
+
+.navbar-toggler {
+  margin-left: auto;
+  align-self: center;
+}
+
+.navbar-collapse {
+  background-color: #004b23;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
 }
 
 /* mobile */
@@ -316,38 +337,6 @@ p {
   }
 }
 
-.about-container {
-  font-family: "Verdana", sans-serif;
-}
-
-.about-header {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-.about-header h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.about-header .subtitle {
-  font-style: italic;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.about-header p {
-  line-height: 1.6;
-}
-
-.about-section {
-  color: white;
-  padding: 60px 20px;
-  clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
-  margin: 0;
-}
-
 .yellow-section {
   background-color: #facc15; /* yellow-400 */
 }
@@ -378,6 +367,7 @@ p {
   position: relative;
   z-index: 1;
   clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
 }
 
 .slanted-yellow {
@@ -513,6 +503,7 @@ p {
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  filter: drop-shadow(0 4px 8px #0000004d);
 }
 
 .accordion-block h3 {
@@ -555,6 +546,22 @@ p {
 .left-slant p,
 .left-slant ul {
   transform: skewX(-12deg);
+}
+
+.slanted-section {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background: transparent;
+}
+
+.slanted-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #c7ee3b; /* or your green/yellow */
+  clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
+  z-index: -1;
 }
 
 /* Accordion = About Me; End */
@@ -820,11 +827,25 @@ p {
 .flipbook {
   width: 1000px;
   height: 600px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Shadow under the book */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   border: 20px solid #0000001c;
   background-color: #a35c00;
   border-radius: 20px;
-  transform: perspective(1000px); /* subtle 3D feel */
+  transform: perspective(1000px);
+}
+
+@media (max-width: 768px) {
+  .flipbook {
+    transform: scale(0.6);
+    transform-origin: top center;
+  }
+}
+
+/* Even smaller phones */
+@media (max-width: 480px) {
+  .flipbook {
+    transform: scale(0.4);
+  }
 }
 
 .flipbook .hard {
