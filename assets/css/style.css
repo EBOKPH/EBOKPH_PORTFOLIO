@@ -736,7 +736,6 @@ p {
   flex-direction: column;
   height: 100%;
   text-decoration: none;
-  color: inherit;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -948,10 +947,19 @@ p {
 .dark-mode .custom-btn:hover,
 .dark-mode .contact-card a:hover,
 .dark-mode .buttondesign:hover h4,
-.darkm-mode .contact-section,
-.dark-mode .buttondesignPokemon:hover h4 {
+.darkm-mode .contact-section {
   color: #ccc !important;
   background-color: #111 !important;
+}
+
+.dark-mode .buttondesignPokemon h4 {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .buttondesignPokemon:hover h4 {
+  background-color: #333 !important;
+  color: #fff !important;
 }
 
 .dark-mode .accordion-block.yellow {
