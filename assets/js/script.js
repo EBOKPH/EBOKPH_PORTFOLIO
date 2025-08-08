@@ -4,7 +4,9 @@ function toggleDarkMode() {
   const image = document.getElementById("introImage");
   const isDark = document.body.classList.contains("dark-mode");
 
-  image.src = isDark
-    ? "images/arts/finaldarkmodeface.png"
-    : "images/arts/kobe.png";
+  if (isDark) {
+    image.src = "images/arts/finaldarkmodeface.png";
+  } else {
+    image.src = "images/arts/kobe.png";
+  }
 }
