@@ -4,7 +4,20 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5 {
+body {
+  background: linear-gradient(to bottom, #007200, #88d422);
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: 700;
   margin-bottom: 3.5rem;
 }
@@ -40,9 +53,8 @@ p {
   text-decoration: none;
 }
 
-
 .half-underline::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   right: 0;
@@ -53,7 +65,7 @@ p {
 }
 
 .half-underlinedefault::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   right: 0;
@@ -64,7 +76,7 @@ p {
 }
 
 .whole-underlinedefault::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   right: 0;
@@ -75,18 +87,18 @@ p {
 }
 
 .half-underline:hover::after {
-  width: 50%;       
-  right: 0;          
+  width: 50%;
+  right: 0;
 }
 
 .half-underlinedefault:hover::after {
-  width: 50%;       
-  right: 0;          
+  width: 50%;
+  right: 0;
 }
 
 .whole-underlinedefault:hover::after {
-  width: 100%;       
-  right: 0;          
+  width: 100%;
+  right: 0;
 }
 
 /* underline design end */
@@ -94,7 +106,7 @@ p {
 /* Navigation bar Design Start */
 
 .custom-navbar {
-  background-color: #004b23; 
+  background-color: #004b23;
   border-bottom: 2px solid #000000;
   padding: 0rem 2rem;
   display: flex;
@@ -119,10 +131,10 @@ p {
   max-height: 300px;
   height: 100%;
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .nav-link {
@@ -140,15 +152,14 @@ p {
 }
 
 .nav-links li a:hover {
-  color: #FCDC2A;
+  color: #fcdc2a;
 }
 
-/* hamburger */
+/* mobile */
 @media (max-width: 720px) {
   .intro-container {
     flex-direction: column;
     text-align: center;
-    
   }
 
   .nav-links {
@@ -159,16 +170,17 @@ p {
 
 /* Navigation bar Design End */
 
+/* Intro Section */
 
 .intro-section {
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: cover;
-  padding: 100px 20px; 
+  padding: 100px 20px;
   color: rgb(0, 0, 0);
   padding-top: 30px;
-} 
+}
 
 .intro-container {
   position: relative;
@@ -190,12 +202,12 @@ p {
 
 .intro-left h1 {
   font-size: 3rem;
-  margin-bottom: 0.5rem; 
-  line-height: 1.2; 
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
 .intro-left h1 strong {
-  color: #ffe747; 
+  color: #ffe747;
   font-weight: bold;
 }
 
@@ -227,11 +239,13 @@ p {
 }
 
 .bordered-img {
-  border: 4px solid #000000; 
-  border-radius: 10px;     
+  border: 4px solid #000000;
+  border-radius: 10px;
 }
 
-/* pulsating Magic  */
+/* Intro Section End*/
+
+/* pulsating text  */
 .pulsating-text {
   animation: pulse 1.5s infinite;
   font-size: 2rem;
@@ -250,6 +264,8 @@ p {
     transform: scale(1);
   }
 }
+
+/* Zigzag Border Design */
 
 .zigzag-border {
   height: 60px;
@@ -300,18 +316,8 @@ p {
   }
 }
 
-
-@keyframes moveWave {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: -400px 0;
-  }
-}
-
 .about-container {
-  font-family: 'Verdana', sans-serif;
+  font-family: "Verdana", sans-serif;
 }
 
 .about-header {
@@ -364,7 +370,6 @@ p {
   margin: 10px 0 20px 20px;
   list-style: disc;
 }
-
 
 .slanted-section {
   color: white;
@@ -443,7 +448,7 @@ p {
 
 .section {
   padding: 4rem 2rem;
-  background: #ffe568; 
+  background: #ffe568;
 }
 
 .section h2 {
@@ -455,7 +460,7 @@ p {
 }
 
 .section2 {
-  background: #379a0e; 
+  background: #379a0e;
   padding: 100px 0;
   position: relative;
   z-index: 1;
@@ -471,7 +476,7 @@ p {
 
 .section3 {
   padding: 4rem 2rem;
-  background: linear-gradient(to bottom, #CCFF33, #FFFF44 ); 
+  background: linear-gradient(to bottom, #ccff33, #ffff44);
 }
 
 .section3 h2 {
@@ -492,7 +497,6 @@ p {
 }
 /*Sections End*/
 
-
 /* Accordion = About Me; Start */
 
 .custom-accordion {
@@ -507,7 +511,7 @@ p {
   padding: 2rem;
   transform: skewX(-12deg);
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
 
@@ -523,11 +527,11 @@ p {
 }
 
 .accordion-block.yellow {
-  background:#ffd000;
+  background: #ffd000;
 }
 
 .accordion-block.green {
-  background: linear-gradient(to right, #31cc57, #23b345);
+  background: #23b345;
   color: #000000;
 }
 
@@ -590,8 +594,6 @@ p {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-
-
 
 /* Contact Section */
 .contact-section {
@@ -660,8 +662,6 @@ p {
   text-decoration: underline;
 }
 
-
-
 /* Footer */
 .footer {
   background-color: #222;
@@ -677,7 +677,6 @@ p {
   align-items: center;
   gap: 20px;
 }
-
 
 /* Email git phone style in footer */
 .social-icon-img {
@@ -713,7 +712,6 @@ p {
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
 }
 
 .buttondesign img {
@@ -755,7 +753,6 @@ p {
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
 }
 
 .buttondesignPokemon img {
@@ -792,7 +789,7 @@ p {
 .button-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem; 
+  gap: 1rem;
   justify-content: center;
   margin-top: 1.5rem;
 }
@@ -809,7 +806,6 @@ p {
   margin-right: 0;
 }
 
-
 /* Flipbook Styles */
 
 .bookbody2 {
@@ -817,40 +813,40 @@ p {
   place-content: center;
   height: 100vh;
   width: 100vw;
-	overflow: hidden;
-	background: #f1c40f;
+  overflow: hidden;
+  background: #f1c40f;
 }
 
 .flipbook {
-    width: 1000px;
-    height: 600px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Shadow under the book */
-    border: 20px solid #0000001c;
-    background-color: #a35c00;
-    border-radius: 20px;
-    transform: perspective(1000px); /* subtle 3D feel */
+  width: 1000px;
+  height: 600px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Shadow under the book */
+  border: 20px solid #0000001c;
+  background-color: #a35c00;
+  border-radius: 20px;
+  transform: perspective(1000px); /* subtle 3D feel */
 }
 
 .flipbook .hard {
-    background: #090e32 !important;
-    color: #fff;
-    font-weight: bold;
-    border: none; 
+  background: #090e32 !important;
+  color: #fff;
+  font-weight: bold;
+  border: none;
 }
 
-.flipbook .hard small{
-	font-style: italic;
-	font-weight: lighter;
-	opacity: 0.7;
-	font-size: 14px;
+.flipbook .hard small {
+  font-style: italic;
+  font-weight: lighter;
+  opacity: 0.7;
+  font-size: 14px;
 }
 
 .flipbook .page {
   background: #dddddd;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   border: 3px solid #0000001c;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -863,13 +859,12 @@ p {
   margin: auto;
   display: block;
   border: 2px solid black;
-  border-radius: 4px; 
+  border-radius: 4px;
 }
 
-
-.flipbook .page small{
-	font-size: 14px;
-    margin-bottom: 10px;
+.flipbook .page small {
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 /* Dark Modes */
@@ -879,12 +874,9 @@ p {
 }
 
 .dark-mode * {
-  background-color: transparent !important;
   color: #fff !important;
   border-color: #fff !important;
 }
-
-
 
 .dark-mode .custom-btn,
 .dark-mode .contact-card,
@@ -916,15 +908,34 @@ p {
   box-shadow: none !important;
 }
 
+.dark-mode .footer {
+  background-color: #222 !important;
+  color: white !important;
+}
+
 .dark-mode .zigzag-border,
 .dark-mode .zigzag-border1,
 .dark-mode .zigzag-border2,
 .dark-mode .zigzag-border3,
 .dark-mode .zigzag-border4 {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'%3E%3Cpath d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%23000000'/%3E%3C/svg%3E") !important;
-  background-repeat: repeat-x !important;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'%3E%3Crect width='400' height='60' fill='%23000000'/%3E%3Cpath d='M0 30 Q50 60 100 30 T200 30 T300 30 T400 30 V0 H0 Z' fill='%23222222'/%3E%3C/svg%3E")
+    repeat-x !important;
   background-size: 400px 60px !important;
-  animation: none !important; /* optional to disable wave movement */
+}
+
+/* CONTACT SECTION in DARK MODE */
+.dark-mode .contact-section {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.dark-mode .contact-card {
+  background-color: #111 !important;
+  border-color: #fff !important;
+}
+
+.dark-mode .contact-card a {
+  color: #fff !important;
 }
 
 .dark-mode img {
@@ -936,16 +947,37 @@ p {
 .dark-mode .custom-btn:hover,
 .dark-mode .contact-card a:hover,
 .dark-mode .buttondesign:hover h4,
+.darkm-mode .contact-section,
 .dark-mode .buttondesignPokemon:hover h4 {
   color: #ccc !important;
   background-color: #111 !important;
 }
 
-body {
-  background: linear-gradient(to bottom, #007200, #88D422); /* classic purple */
-  color: #000000; /* white text for contrast */
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  cursor: default;
+.dark-mode .accordion-block.yellow {
+  background: #9b9b9b !important;
+  color: #000 !important;
+}
+
+.dark-mode .accordion-block.green {
+  background: #9b9b9b !important;
+  color: #000 !important;
+}
+
+.dark-mode .accordion-block.yellow,
+.dark-mode .accordion-block.green {
+  color: #000 !important;
+}
+
+.dark-mode .accordion-block.yellow *,
+.dark-mode .accordion-block.green * {
+  color: #000 !important;
+}
+
+.dark-mode .section0 {
+  background: linear-gradient(to bottom, #000, #111) !important;
+  color: #fff !important;
+}
+
+.dark-mode .contact-section {
+  background-color: #000 !important;
 }
