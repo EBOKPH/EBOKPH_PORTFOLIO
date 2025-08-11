@@ -31,6 +31,17 @@ p {
   color: white;
 }
 
+.scroll-gif {
+  position: fixed;
+  left: -3%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 300px;
+  pointer-events: none;
+  z-index: 9999;
+}
+
 /* underline design Start */
 
 .half-underline {
@@ -177,9 +188,12 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover;
+  background: url("../../images/arts/section0bg.png");
+  background-size: 150% auto;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 100px 20px;
-  color: rgb(0, 0, 0);
+  color: #000000;
   padding-top: 30px;
 }
 
@@ -233,17 +247,6 @@ p {
   border-radius: 100px;
 }
 
-.clickable-img {
-  max-width: 200px;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-.bordered-img {
-  border: 4px solid #000000;
-  border-radius: 10px;
-}
-
 /* Intro Section End*/
 
 /* pulsating text  */
@@ -294,7 +297,7 @@ p {
 
 .zigzag-border3 {
   height: 60px;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%235eb618'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%23379a0e'/></svg>");
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%235eb618'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%23ffe568'/></svg>");
   background-repeat: repeat-x;
   background-size: 400px 60px;
   animation: moveWave 6s linear infinite;
@@ -317,79 +320,39 @@ p {
   }
 }
 
-.yellow-section {
-  background-color: #facc15; /* yellow-400 */
-}
-
-.green-section {
-  background-color: #22c55e; /* green-500 */
-}
-
-.inner-content {
-  max-width: 900px;
-  margin: auto;
-}
-
-.inner-content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.inner-content ul {
-  margin: 10px 0 20px 20px;
-  list-style: disc;
-}
-
-.slanted-section {
-  color: white;
-  padding: 40px 30px;
-  margin-bottom: 0;
-  position: relative;
-  z-index: 1;
-  clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
-}
-
-.slanted-yellow {
-  background: #c7ee3b;
-  color: #111;
-  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
-}
-
-.slanted-green {
-  background: #32df60;
-  color: #000000;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-}
-
-.slanted-section h3 {
-  margin-top: 0;
-  font-size: 1.8rem;
-}
-
-.slanted-section ul {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-.slanted-section strong {
-  font-weight: bold;
-}
-
-.section-container {
-  margin: 0;
-  padding: 0;
-}
-
 .gallery-section {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 3rem 0;
-  background-color: #5eb618;
+  background: url("../../images/arts/section1bg.png") #5eb618 no-repeat center
+    center;
+  background-size: 50% auto;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .gallery-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #000000;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.gallery-section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  background: url("../../images/arts/section1bg.png") #ffe568 no-repeat center
+    center;
+  background-size: 50% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gallery-section2 h2 {
   text-align: center;
   font-size: 2.5rem;
   color: #000000;
@@ -417,8 +380,15 @@ p {
 }
 
 .section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 4rem 2rem;
-  background: #ffe568;
+  background: url("../../images/arts/section1bg.png") #ffe568 no-repeat center
+    center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .section h2 {
@@ -430,10 +400,14 @@ p {
 }
 
 .section2 {
-  background: #379a0e;
   padding: 100px 0;
   position: relative;
   z-index: 1;
+  background: url("../../images/arts/section1bg.png") no-repeat center center,
+    #379a0e;
+  background-size: 50% auto;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .section2 h2 {
@@ -442,17 +416,6 @@ p {
   color: #000000;
   margin-top: 20px;
   margin-bottom: 5px;
-}
-
-.section3 {
-  padding: 4rem 2rem;
-  background: linear-gradient(to bottom, #ccff33, #ffff44);
-}
-
-.section3 h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #000000;
 }
 
 .section4 {
@@ -481,7 +444,7 @@ p {
   padding: 2rem;
   transform: skewX(-12deg);
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px #0000001a;
   transition: transform 0.3s;
   filter: drop-shadow(0 4px 8px #0000004d);
 }
@@ -526,22 +489,6 @@ p {
 .left-slant p,
 .left-slant ul {
   transform: skewX(-12deg);
-}
-
-.slanted-section {
-  position: relative;
-  z-index: 1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  background: transparent;
-}
-
-.slanted-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #c7ee3b; /* or your green/yellow */
-  clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
-  z-index: -1;
 }
 
 /* Accordion = About Me; End */
@@ -610,7 +557,7 @@ p {
   padding: 0;
   width: 100%;
   max-width: 250px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px #0000001a;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
@@ -713,7 +660,7 @@ p {
   padding: 1rem;
   font-size: 1.25rem;
   background-color: #f3e6ff;
-  color: #6b2bbd;
+  color: #000000;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -754,7 +701,7 @@ p {
   padding: 1rem;
   font-size: 1.25rem;
   background-color: #f3e6ff;
-  color: #6b2bbd;
+  color: #000000;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -794,15 +741,6 @@ p {
 
 /* Flipbook Styles */
 
-.bookbody2 {
-  display: grid;
-  place-content: center;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  background: #f1c40f;
-}
-
 .flipbook {
   width: 1000px;
   height: 600px;
@@ -828,8 +766,15 @@ p {
 }
 
 .flipbook .hard {
-  background: #090e32 !important;
+  background: #004b23 !important;
   color: #fff;
+  font-weight: bold;
+  border: none;
+}
+
+.flipbook .hard2 {
+  background: #004b23 !important;
+  color: #f8c809;
   font-weight: bold;
   border: none;
 }
@@ -867,6 +812,15 @@ p {
   margin-bottom: 10px;
 }
 
+.booklet {
+  flex: 1;
+}
+
+.booklet h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 /* Dark Modes */
 .dark-mode {
   background-color: #000 !important;
@@ -884,6 +838,7 @@ p {
 .dark-mode .flipbook,
 .dark-mode .flipbook .page,
 .dark-mode .flipbook .hard,
+.dark-mode .flipbook .hard2,
 .dark-mode .portfolio-box,
 .dark-mode .portfolio-info,
 .dark-mode .intro-section,
@@ -891,6 +846,7 @@ p {
 .dark-mode .section2,
 .dark-mode .section3,
 .dark-mode .gallery-section,
+.dark-mode .gallery-section2,
 .dark-mode .nav-container,
 .dark-mode .custom-navbar,
 .dark-mode .contact-section,
