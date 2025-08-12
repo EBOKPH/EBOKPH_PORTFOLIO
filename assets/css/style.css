@@ -167,6 +167,12 @@ p {
   color: #fcdc2a;
 }
 
+.nav-links li a.active {
+  color: #fcdc2a; /* yellow text */
+  background-color: #003d1c; /* darker green background */
+  border-radius: 5px;
+}
+
 /* mobile */
 @media (max-width: 720px) {
   .intro-container {
@@ -182,19 +188,29 @@ p {
 
 /* Navigation bar Design End */
 
-/* Intro Section */
+/* Intro Section Outer BG*/
 
 .intro-section {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../../images/arts/section0bg.png");
-  background-size: 150% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 100px 20px;
+  padding: 80px 20px;
   color: #000000;
   padding-top: 30px;
+  overflow: visible;
+}
+
+.intro-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%; /* make it overflow */
+  background: url("../../images/arts/section0bg.jpg") center top / 100% auto
+    no-repeat;
+  z-index: -1; /* keep it behind content */
 }
 
 .intro-container {
@@ -280,6 +296,7 @@ p {
 }
 
 .zigzag-border1 {
+  z-index: 1;
   height: 60px;
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%23FFE568'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%23379A0E'/></svg>");
   background-repeat: repeat-x;
@@ -325,9 +342,8 @@ p {
   justify-content: center;
   align-items: center;
   padding: 3rem 0;
-  background: url("../../images/arts/section1bg.png") #5eb618 no-repeat center
-    center;
-  background-size: 50% auto;
+  background-color: #5eb618;
+  background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -345,8 +361,7 @@ p {
   justify-content: center;
   align-items: center;
   padding: 3rem 0;
-  background: url("../../images/arts/section1bg.png") #ffe568 no-repeat center
-    center;
+  background-color: #ffe568;
   background-size: 50% auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -371,7 +386,7 @@ p {
 
 .section0 {
   padding: 2rem 2rem;
-  background: linear-gradient(to bottom, #005500, #008000);
+  background: linear-gradient(to bottom, #005500e5, #008000de);
   border-radius: 60px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -380,15 +395,14 @@ p {
 }
 
 .section {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 4rem 2rem;
-  background: url("../../images/arts/section1bg.png") #ffe568 no-repeat center
-    center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #ffe568;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .section h2 {
@@ -403,8 +417,7 @@ p {
   padding: 100px 0;
   position: relative;
   z-index: 1;
-  background: url("../../images/arts/section1bg.png") no-repeat center center,
-    #379a0e;
+  background-color: #379a0e;
   background-size: 50% auto;
   background-repeat: no-repeat;
   background-position: center;
