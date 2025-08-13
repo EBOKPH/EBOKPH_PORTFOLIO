@@ -36,8 +36,8 @@ p {
   left: -3%;
   top: 50%;
   transform: translateY(-50%);
-  width: 200px;
-  height: 300px;
+  width: 12.5rem;
+  height: 18.75rem;
   pointer-events: none;
   z-index: 9999;
 }
@@ -117,6 +117,30 @@ p {
 
 /* Navigation bar Design Start */
 
+#home,
+#contact {
+  scroll-margin-top: 0px;
+}
+
+#portfolio,
+#booklet,
+#abtme {
+  scroll-margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  #home,
+  #booklet,
+  #booklet2,
+  #contact {
+    scroll-margin-top: 40px;
+  }
+
+  #portfolio,
+  #abtme {
+    scroll-margin-top: 40px;
+  }
+}
 .custom-navbar {
   background-color: #004b23;
   border-bottom: 2px solid #000000;
@@ -150,14 +174,13 @@ p {
 }
 
 .nav-link {
-  padding: 0.5rem 1rem;
+  padding: 8px;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
 .nav-links li a {
-  text-decoration: none;
   color: #ffffff;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -168,22 +191,9 @@ p {
 }
 
 .nav-links li a.active {
-  color: #fcdc2a; /* yellow text */
-  background-color: #003d1c; /* darker green background */
+  color: #fcdc2a;
+  background-color: #fcdc2a;
   border-radius: 5px;
-}
-
-/* mobile */
-@media (max-width: 720px) {
-  .intro-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-  }
 }
 
 /* Navigation bar Design End */
@@ -216,15 +226,29 @@ p {
 .intro-container {
   position: relative;
   z-index: 1;
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
+
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  gap: 1rem;
+
+  padding: 2rem;
+
+  background: linear-gradient(to bottom, #005500e5, #008000de);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: 60px;
+  color: #fff;
 }
+
+/* Intro Contents */
 
 .intro-left {
   flex: 1 1 600px;
@@ -306,7 +330,7 @@ p {
 
 .zigzag-border2 {
   height: 60px;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%23379A0E'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%235EB618'/></svg>");
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%23379A0E'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%23ffe568'/></svg>");
   background-repeat: repeat-x;
   background-size: 400px 60px;
   animation: moveWave 6s linear infinite;
@@ -314,15 +338,7 @@ p {
 
 .zigzag-border3 {
   height: 60px;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%235eb618'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%23ffe568'/></svg>");
-  background-repeat: repeat-x;
-  background-size: 400px 60px;
-  animation: moveWave 6s linear infinite;
-}
-
-.zigzag-border4 {
-  height: 60px;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%23379a0e'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%237ccb21'/></svg>");
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'><rect width='400' height='60' fill='%23ffe568'/><path d='M0 30 Q50 0 100 30 T200 30 T300 30 T400 30 V60 H0 Z' fill='%237ccb21'/></svg>");
   background-repeat: repeat-x;
   background-size: 400px 60px;
   animation: moveWave 6s linear infinite;
@@ -337,15 +353,69 @@ p {
   }
 }
 
-.gallery-section {
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+/*Sections Start
+  0 - Home
+  1 - About Me
+  2 - Portfolio
+  4 - (3)Booklet and (4)Certificates
+  contact - Contact
+*/
+
+.aboutme-section {
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 3rem 0;
-  background-color: #5eb618;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center;
+  justify-content: center;
+  padding: 2rem 2rem;
+  background-color: #ffe568;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.aboutme-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: -0.625rem;
+  margin-bottom: 0.3125rem;
+  color: #000000;
+}
+
+.portfolio-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2rem;
+  background-color: #379a0e;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.portfolio-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #000000;
+  margin-top: -0.625rem;
+  margin-bottom: 0.3125rem;
+}
+
+.gallery-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2rem;
+  padding-bottom: 5rem;
+  background-color: #ffe568;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .gallery-section h2 {
@@ -356,128 +426,62 @@ p {
   margin-bottom: 5px;
 }
 
-.gallery-section2 {
+.booklet-section {
+  display: flex; /* Make the section a flex container */
+  justify-content: center; /* Center the flipbooks horizontally */
+  gap: 2rem; /* Space between the two flipbooks */
+  flex-wrap: nowrap; /* Allow wrapping on small screens */
+}
+
+.book-wrapper {
+  flex: 1 1 500px; /* Each flipbook takes at least 500px but can grow */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 0;
-  background-color: #ffe568;
-  background-size: 50% auto;
-  background-repeat: no-repeat;
-  background-position: center;
+  justify-content: center; /* Center the flipbook inside its wrapper */
 }
 
-.gallery-section2 h2 {
+.booklet-section h2 {
   text-align: center;
   font-size: 2.5rem;
   color: #000000;
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
-
-.subtitle {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #000000;
-}
-
-/*Sections Start*/
-
-.section0 {
-  padding: 2rem 2rem;
-  background: linear-gradient(to bottom, #005500e5, #008000de);
-  border-radius: 60px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #fff;
-}
-
-.section {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 2rem;
-  background-color: #ffe568;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-top: 40px;
-  margin-bottom: 5px;
-  color: #000000;
-}
-
-.section2 {
-  padding: 100px 0;
-  position: relative;
-  z-index: 1;
-  background-color: #379a0e;
-  background-size: 50% auto;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.section2 h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #000000;
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
-
-.section4 {
-  padding: 4rem 2rem;
-}
-
-.section4 h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #000000;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 /*Sections End*/
 
 /* Accordion = About Me; Start */
 
-.custom-accordion {
+.custom-slanted-holder {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-top: 2rem;
 }
 
-.accordion-block {
+.slanted-block {
   color: #000000;
   padding: 2rem;
   transform: skewX(-12deg);
-  border-radius: 12px;
-  box-shadow: 0 6px 12px #0000001a;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.375rem 10.75rem #0000001a;
   transition: transform 0.3s;
-  filter: drop-shadow(0 4px 8px #0000004d);
+  filter: drop-shadow(0 0.25rem 0.5rem #0000004d);
 }
 
-.accordion-block h3 {
+.slanted-block h3 {
   transform: skewX(12deg);
   margin-bottom: 1rem;
 }
 
-.accordion-block p,
-.accordion-block ul {
+.slanted-block p,
+.slanted-block ul {
   transform: skewX(12deg);
   margin: 0;
 }
 
-.accordion-block.yellow {
+.slanted-block.yellow {
   background: #ffd000;
 }
 
-.accordion-block.green {
+.slanted-block.green {
   background: #23b345;
   color: #000000;
 }
@@ -506,7 +510,8 @@ p {
 
 /* Accordion = About Me; End */
 
-/* Portfolio Grid */
+/* Portfolio section */
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -543,6 +548,7 @@ p {
 }
 
 /* Contact Section */
+
 .contact-section {
   background: linear-gradient(to bottom, #7bcb1f, #96ca5a);
   padding: 4rem 2rem;
@@ -691,47 +697,6 @@ p {
   color: #ffd000;
 }
 
-.buttondesignPokemon {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  text-decoration: none;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.buttondesignPokemon img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease;
-  padding: 30px;
-}
-
-.buttondesignPokemon h4 {
-  margin: 0;
-  padding: 1rem;
-  font-size: 1.25rem;
-  background-color: #f3e6ff;
-  color: #000000;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.buttondesignPokemon:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px #00000000;
-}
-
-.buttondesignPokemon:hover img {
-  transform: scale(1.03);
-}
-
-.buttondesignPokemon:hover h4 {
-  background-color: #e0cff1;
-  color: #ffd000;
-}
-
 .button-group {
   display: flex;
   flex-wrap: wrap;
@@ -755,12 +720,15 @@ p {
 /* Flipbook Styles */
 
 .flipbook {
-  width: 1000px;
-  height: 600px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  border: 20px solid #0000001c;
-  background-color: #a35c00;
+  width: 650px;
+  height: 500px;
+  box-shadow: 0 20px 40px #00000066;
   border-radius: 20px;
+  background-image: url("../../images/arts/tabletop.jpg"); /* <-- replace with your image */
+  background-size: cover; /* make it cover the entire flipbook */
+  background-position: center;
+  background-repeat: no-repeat;
+
   transform: perspective(1000px);
 }
 
@@ -807,6 +775,7 @@ p {
   align-items: center;
   gap: 10px;
   border: 3px solid #0000001c;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -834,128 +803,302 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Dark Modes */
-.dark-mode {
-  background-color: #000 !important;
-  color: #fff !important;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Compact navbar row */
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between; /* brand left, hamburger right */
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    max-height: none;
+    gap: 0.5rem; /* added from first snippet, can remove if unwanted */
+  }
 
-.dark-mode * {
-  color: #fff !important;
-  border-color: #fff !important;
-}
+  /* Smaller brand text & logo */
+  .navbar-brand {
+    font-size: 0.9rem; /* from second snippet */
+    gap: 0.25rem; /* from second snippet */
+    display: flex;
+    align-items: center;
+  }
 
-.dark-mode .custom-btn,
-.dark-mode .contact-card,
-.dark-mode .accordion-block,
-.dark-mode .flipbook,
-.dark-mode .flipbook .page,
-.dark-mode .flipbook .hard,
-.dark-mode .flipbook .hard2,
-.dark-mode .portfolio-box,
-.dark-mode .portfolio-info,
-.dark-mode .intro-section,
-.dark-mode .section,
-.dark-mode .section2,
-.dark-mode .section3,
-.dark-mode .gallery-section,
-.dark-mode .gallery-section2,
-.dark-mode .nav-container,
-.dark-mode .custom-navbar,
-.dark-mode .contact-section,
-.dark-mode .contact-card a,
-.dark-mode .buttondesign h4,
-.dark-mode .zigzag-border,
-.dark-mode .zigzag-border1,
-.dark-mode .zigzag-border2,
-.dark-mode .zigzag-border3,
-.dark-mode .zigzag-border4,
-.dark-mode .section0 {
-  background-color: #000 !important;
-  color: #fff !important;
-  border-color: #fff !important;
-  box-shadow: none !important;
-}
+  .navbar-brand img {
+    max-height: px; /* from second snippet */
+    width: auto;
+    height: auto;
+  }
 
-.dark-mode .footer {
-  background-color: #222 !important;
-  color: white !important;
-}
+  /* Smaller hamburger button */
+  .navbar-toggler {
+    padding: 0.25rem 0.4rem;
+    font-size: 0.9rem;
+  }
 
-.dark-mode .zigzag-border,
-.dark-mode .zigzag-border1,
-.dark-mode .zigzag-border2,
-.dark-mode .zigzag-border3,
-.dark-mode .zigzag-border4 {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'%3E%3Crect width='400' height='60' fill='%23000000'/%3E%3Cpath d='M0 30 Q50 60 100 30 T200 30 T300 30 T400 30 V0 H0 Z' fill='%23222222'/%3E%3C/svg%3E")
-    repeat-x !important;
-  background-size: 400px 60px !important;
-}
+  /* Center the menu items when expanded */
+  .navbar-collapse {
+    text-align: center;
+  }
+  .navbar-nav {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column !important; /* from first snippet */
+    gap: 0.25rem;
+  }
+  .nav-links li {
+    display: inline-block; /* horizontal centering from second snippet */
+  }
+  .nav-links li a {
+    padding: 6px 8px; /* from first snippet */
+    font-size: 0.9rem;
+  }
 
-/* CONTACT SECTION in DARK MODE */
-.dark-mode .contact-section {
-  background: #000 !important;
-  color: #fff !important;
-}
+  /* Intro Section */
+  .intro-section {
+    padding: 40px 10px;
+    position: relative;
+  }
+  .intro-section::after {
+    background-size: cover !important;
+    background-position: center center !important;
+    height: 100% !important;
+  }
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .intro-left h1 {
+    font-size: 2.2rem;
+  }
+  .intro-left p {
+    font-size: 1.2rem;
+    padding-left: 0;
+  }
+  .intro-right {
+    justify-content: center;
+  }
+  .intro-right img {
+    max-width: 80%;
+    border-radius: 50px;
+  }
 
-.dark-mode .contact-card {
-  background-color: #111 !important;
-  border-color: #fff !important;
-}
+  /* Zigzag Borders */
+  .zigzag-border,
+  .zigzag-border1,
+  .zigzag-border2,
+  .zigzag-border3 {
+    height: 40px;
+    background-size: 200px 40px;
+  }
 
-.dark-mode .contact-card a {
-  color: #fff !important;
-}
+  /* Gallery Sections */
+  .gallery-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  .gallery-section h2 {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
 
-.dark-mode img {
-  filter: grayscale(100%) brightness(0.8) contrast(1.2) !important;
-  border-color: #fff !important;
-}
+  /* About Me */
+  .aboutme-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .slanted-block {
+    transform: none;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+  .slanted-block h3,
+  .slanted-block p,
+  .slanted-block ul {
+    transform: none;
+  }
 
-.dark-mode .nav-links li a:hover,
-.dark-mode .custom-btn:hover,
-.dark-mode .contact-card a:hover,
-.dark-mode .buttondesign:hover h4,
-.darkm-mode .contact-section {
-  color: #ccc !important;
-  background-color: #111 !important;
-}
+  /* Portfolio */
+  .portfolio-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .portfolio-box {
+    max-width: 100%;
+  }
 
-.dark-mode .buttondesignPokemon h4 {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-}
+  /* Booklet Section */
 
-.dark-mode .buttondesignPokemon:hover h4 {
-  background-color: #333 !important;
-  color: #fff !important;
-}
+  .booklet-section {
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
 
-.dark-mode .accordion-block.yellow {
-  background: #9b9b9b !important;
-  color: #000 !important;
-}
+    /* Contact Section */
+    .contact-section {
+      padding: 2rem 1rem;
+    }
+    .contact-grid {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .contact-card {
+      max-width: 100%;
+    }
 
-.dark-mode .accordion-block.green {
-  background: #9b9b9b !important;
-  color: #000 !important;
-}
+    /* Buttons */
+    .button-group {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .custom-btn {
+      width: 100%;
+      padding: 0.8rem;
+    }
 
-.dark-mode .accordion-block.yellow,
-.dark-mode .accordion-block.green {
-  color: #000 !important;
-}
+    /* Footer */
+    .footer {
+      padding: 1.5rem 1rem;
+    }
+    .social-icons {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .social-icon-img {
+      height: 40px;
+      width: 40px;
+    }
+  }
 
-.dark-mode .accordion-block.yellow *,
-.dark-mode .accordion-block.green * {
-  color: #000 !important;
-}
+  @media (max-width: 720px) {
+    .intro-container {
+      flex-direction: column;
+      text-align: center;
+    }
 
-.dark-mode .section0 {
-  background: linear-gradient(to bottom, #000, #111) !important;
-  color: #fff !important;
-}
+    .nav-links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
 
-.dark-mode .contact-section {
-  background-color: #000 !important;
+  /* Dark Modes */
+  .dark-mode {
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+
+  .dark-mode * {
+    color: #fff !important;
+    border-color: #fff !important;
+  }
+
+  .dark-mode .custom-btn,
+  .dark-mode .contact-card,
+  .dark-mode .accordion-block,
+  .dark-mode .flipbook,
+  .dark-mode .flipbook .page,
+  .dark-mode .flipbook .hard,
+  .dark-mode .flipbook .hard2,
+  .dark-mode .portfolio-box,
+  .dark-mode .portfolio-info,
+  .dark-mode .intro-section,
+  .dark-mode .portfolio-section,
+  .dark-mode .aboutme-section,
+  .dark-mode .gallery-section,
+  .dark-mode .gallery-section2,
+  .dark-mode .nav-container,
+  .dark-mode .custom-navbar,
+  .dark-mode .contact-section,
+  .dark-mode .contact-card a,
+  .dark-mode .buttondesign h4,
+  .dark-mode .zigzag-border,
+  .dark-mode .zigzag-border1,
+  .dark-mode .zigzag-border2,
+  .dark-mode .zigzag-border3,
+  .dark-mode .intro-container {
+    background-color: #000 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+    box-shadow: none !important;
+  }
+
+  .dark-mode .footer {
+    background-color: #222 !important;
+    color: white !important;
+  }
+
+  .dark-mode .zigzag-border,
+  .dark-mode .zigzag-border1,
+  .dark-mode .zigzag-border2,
+  .dark-mode .zigzag-border3 {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'%3E%3Crect width='400' height='60' fill='%23000000'/%3E%3Cpath d='M0 30 Q50 60 100 30 T200 30 T300 30 T400 30 V0 H0 Z' fill='%23222222'/%3E%3C/svg%3E")
+      repeat-x !important;
+    background-size: 400px 60px !important;
+  }
+
+  /* CONTACT SECTION in DARK MODE */
+  .dark-mode .contact-section {
+    background: #000 !important;
+    color: #fff !important;
+  }
+
+  .dark-mode .contact-card {
+    background-color: #111 !important;
+    border-color: #fff !important;
+  }
+
+  .dark-mode .contact-card a {
+    color: #fff !important;
+  }
+
+  .dark-mode img {
+    filter: grayscale(100%) brightness(0.8) contrast(1.2) !important;
+    border-color: #fff !important;
+  }
+
+  .dark-mode .nav-links li a:hover,
+  .dark-mode .custom-btn:hover,
+  .dark-mode .contact-card a:hover,
+  .dark-mode .buttondesign:hover h4,
+  .darkm-mode .contact-section {
+    color: #ccc !important;
+    background-color: #111 !important;
+  }
+
+  .dark-mode .accordion-block.yellow {
+    background: #9b9b9b !important;
+    color: #000 !important;
+  }
+
+  .dark-mode .accordion-block.green {
+    background: #9b9b9b !important;
+    color: #000 !important;
+  }
+
+  .dark-mode .accordion-block.yellow,
+  .dark-mode .accordion-block.green {
+    color: #000 !important;
+  }
+
+  .dark-mode .accordion-block.yellow *,
+  .dark-mode .accordion-block.green * {
+    color: #000 !important;
+  }
+
+  .dark-mode .intro-container {
+    background: linear-gradient(to bottom, #000, #111) !important;
+    color: #fff !important;
+  }
+
+  .dark-mode .contact-section {
+    background-color: #000 !important;
+  }
 }
