@@ -44,13 +44,6 @@ p {
 
 /* underline design Start */
 
-.half-underline {
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-}
-
 .half-underlinedefault {
   cursor: default;
   position: relative;
@@ -63,17 +56,6 @@ p {
   position: relative;
   display: inline-block;
   text-decoration: none;
-}
-
-.half-underline::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 2px;
-  background-color: #000;
-  transition: width 0.4s ease, right 0.4s ease;
 }
 
 .half-underlinedefault::after {
@@ -888,10 +870,14 @@ p {
 }
 
 .dark-mode .slanted-block.yellow,
-.dark-mode .slanted-block.green,
+.dark-mode .slanted-block.green {
+  background-color: #111 !important;
+  color: #fff !important;
+}
+
 .dark-mode .slanted-block.yellow *,
 .dark-mode .slanted-block.green * {
-  color: #000 !important;
+  color: #fff !important;
 }
 
 .dark-mode .intro-container {
