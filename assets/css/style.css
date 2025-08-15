@@ -217,10 +217,10 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  height: 150%; /* make it overflow */
+  height: 150%;
   background: url("../../images/arts/section0bg.jpg") center top / 100% auto
     no-repeat;
-  z-index: -1; /* keep it behind content */
+  z-index: -1;
 }
 
 .intro-container {
@@ -426,17 +426,32 @@ p {
   margin-bottom: 5px;
 }
 
+.booklet-superheader {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: show;
+}
+
+.booklet-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .booklet-section {
-  display: flex; /* Make the section a flex container */
-  justify-content: center; /* Center the flipbooks horizontally */
-  gap: 2rem; /* Space between the two flipbooks */
-  flex-wrap: nowrap; /* Allow wrapping on small screens */
+  margin-top: 20px;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 .book-wrapper {
-  flex: 1 1 500px; /* Each flipbook takes at least 500px but can grow */
+  flex: 1 1 500px;
   display: flex;
-  justify-content: center; /* Center the flipbook inside its wrapper */
+  justify-content: center;
 }
 
 .booklet-section h2 {
@@ -447,7 +462,7 @@ p {
 }
 /*Sections End*/
 
-/* Accordion = About Me; Start */
+/* slanted section = About Me; Start */
 
 .custom-slanted-holder {
   display: flex;
