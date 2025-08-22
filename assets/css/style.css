@@ -80,11 +80,6 @@ p {
   transition: width 0.4s ease, right 0.4s ease;
 }
 
-.half-underline:hover::after {
-  width: 50%;
-  right: 0;
-}
-
 .half-underlinedefault:hover::after {
   width: 50%;
   right: 0;
@@ -475,7 +470,7 @@ p {
 }
 
 .slanted-block.yellow {
-  background: #ffd000;
+  background: #b32391;
   color: #000000;
 }
 
